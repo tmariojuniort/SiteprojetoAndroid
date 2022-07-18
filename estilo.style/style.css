@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* fontes importada do site do google*/
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf')format('opentype'); /*código importado de sites de fontes para site*/
+    font-weight: normal;
+}
+/*#c5ebd6 #83e1ad#3ddc84 #2fa866 #1a5c37 #063d1e*/
+
+:root{
+        --cor0: #c5ebd6;
+        --cor1: #83e1ad;
+        --cor2: #3ddc84;
+        --cor3: #2fa866;
+        --cor4: #1a5c37;
+        --cor5: #063d1e;
+
+        --fonte-padrao: arial, verdana, helvetica, sans-serif;
+        --fonte-destaque: 'Bebas Neue', 'cursive';
+        --font-android: 'Android', 'cursive';
+      }
+      /* para fazer a mesma configuração para todas as tags em 
+      um só usa configuração global exemplo *{ } */
+ *{
+    margin: 0px;
+    padding: 0px;
+ }     
+
+body{
+    background-color: #c5ebd6;
+    font-family: var(--fonte-padrao);
+}
+
+a.externa::after{
+    content: '\00A0\1F517';
+}
+
+header{
+    background-image:linear-gradient(to bottom, var(--cor2), var(--cor5));
+    font-size: 1.2em;
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.425);
+}
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+     color: white;
+     max-width: 600px;
+     padding-right: 10px;
+     padding-left: 10px;
+     margin: auto;
+     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.425);
+    
+
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.316);
+}
+nav > a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration:none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.482);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main h1 {
+    background-color:var(--cor3);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;    /* font-size aumenta o tamanho da fonte do site*/
+}
+
+main h2 { 
+    font-family: var(--font-android);
+    color: var(--cor3);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2),transparent);
+    text-indent: 8px;
+}
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*esse aqui é o espaço que tem no começo do paragrafo*/
+    font-size: 1em;   /*esse aqui é se a letra vai ser mais forte ou fraca*/
+    line-height: 2em; /*esse aqui é o espaçamento entre linha no texto*/ 
+    
+    /* caso seja igual os 2 numero acima dos 4 lados pode ser 15px, 
+    agora se for 2 lados iguais pode ser 15px 0px, esses valores só exemplo,
+     pode ser o valor que você decidir*/
+     /*para arrumar configuração de texto no paragrafo*/
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor3);
+    padding: 2px 6px;
+}
+main img{
+    width: 100%;
+ /* posso colocar width:50%, 100% o tanto que achar melhor, 
+    pode ser tbm max-width ou min-width: e o numero de px */
+}
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+/*margin-bottom separa por espaço um elemento do outro dentro do site*/
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 40%;
+    position: relative;
+
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    right: 90%;
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.377); /* esse box-shadow para fazer sombras nos elementos do site*/
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color:white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* - menos o numero é margin negativa, só numero é margin positiva, traduzindo um vai para tras(negativo) e outro para frente(positivo)*/
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+aside > ul {
+     list-style-position: inside;
+     columns: 2;
+}
+footer{
+        list-style-type: '\2714\00A0\00A0'; /* U+2414 esse é código que pega nos sites de emogin pedia,     
+                                            ou outros sites que tenha código de emogis. e para o emogi aparecer no site vc usa a barra invertida essa aq \ e para da espaçamento vc usa o código \00A0 ou 0020\ */
+        background-color: var(--cor5);          
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+        padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
